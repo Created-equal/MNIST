@@ -80,7 +80,9 @@ def main():
         test_data = tuple(validation_data)
         network = Neural_Network((784, 50, 10))
         """
-                Hyper-parameters of each epoch are decided by users.
+                Hyper-parameters of each training-epoch are decided by users.
+                minibatch_size : the size of each minibatch in this training-epoch
+                eta : the learning rate of this training-epoch
         """
         while True:
                 network.train(training_data, int(input("minibatch_size : ")), float(input("eta : ")))
