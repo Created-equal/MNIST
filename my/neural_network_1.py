@@ -79,6 +79,9 @@ def main():
         validation_data = tuple(validation_data)
         test_data = tuple(validation_data)
         network = Neural_Network((784, 50, 10))
+        """
+                Hyper-parameters of each epoch are decided by users.
+        """
         while True:
                 network.train(training_data, int(input("minibatch_size : ")), float(input("eta : ")))
                 network.evaluate(test_data)
